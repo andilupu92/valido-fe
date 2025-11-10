@@ -2,7 +2,7 @@ import { renderHook } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 
 // Adjust this import to your file
-import { useTheme, ThemeProvider } from '../src/components/theme-provider'; 
+import { useTheme, ThemeProvider } from '../src/components/theme-provider';
 
 describe('useTheme Hook', () => {
   it('throws an error when used outside of a ThemeProvider', () => {
@@ -11,7 +11,7 @@ describe('useTheme Hook', () => {
     console.error = vi.fn();
 
     expect(() => renderHook(() => useTheme())).toThrow(
-      'useTheme must be used within a ThemeProvider'
+      'useTheme must be used within a ThemeProvider',
     );
     // Restore the original console.error
     console.error = originalError;
