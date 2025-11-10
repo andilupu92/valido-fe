@@ -14,6 +14,7 @@ type ViteConfigWithTest = Parameters<typeof defineConfig>[0] & {
       provider: string;
       reporter: string[];
       include: string[];
+      reportsDirectory: string;
       exclude: string[];
     };
   };
@@ -33,8 +34,9 @@ const config: ViteConfigWithTest = {
     css: true,
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'json', 'html'],
+      reporter: ['text', 'lcov'],
       include: ['src/**/*.{ts,tsx}'],
+      reportsDirectory: './coverage',
       exclude: [
         'node_modules/**',
         'dist/**',
