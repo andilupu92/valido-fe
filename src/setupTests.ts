@@ -8,5 +8,5 @@ class MockResizeObserver {
   disconnect() { return vi.fn(); }
 }
 
-// @ts-ignore - ResizeObserver is used but not directly
+
 window.ResizeObserver = MockResizeObserver;

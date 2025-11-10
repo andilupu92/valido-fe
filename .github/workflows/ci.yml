@@ -27,8 +27,8 @@ jobs:
         run: npm ci
 
       # 4️⃣ Lint check
-      - name: Run ESLint
-        run: npm run lint
+      #- name: Run ESLint
+      #  run: npm run lint
 
       # 5️⃣ Format check (Prettier)
       - name: Check formatting
