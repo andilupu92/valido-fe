@@ -60,5 +60,3 @@ jobs:
       # 🔟 Build for production
       - name: Build project
         run: npm run build
-
-      
