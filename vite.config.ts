@@ -6,18 +6,18 @@ import path from 'path';
 // Extend Vite config type to include test configuration
 type ViteConfigWithTest = Parameters<typeof defineConfig>[0] & {
   test: {
-    globals: boolean
-    environment: string
-    setupFiles: string[]
-    css: boolean
+    globals: boolean;
+    environment: string;
+    setupFiles: string[];
+    css: boolean;
     coverage: {
-      provider: string
-      reporter: string[]
-      include: string[]
-      exclude: string[]
-    }
-  }
-}
+      provider: string;
+      reporter: string[];
+      include: string[];
+      exclude: string[];
+    };
+  };
+};
 
 const config: ViteConfigWithTest = {
   plugins: [react()],
@@ -40,7 +40,7 @@ const config: ViteConfigWithTest = {
         'dist/**',
         'src/setupTests.ts',
         'src/**/*.d.ts',
-        'src/**/*.test.{ts,tsx}'
+        'src/**/*.test.{ts,tsx}',
       ],
     },
   },
